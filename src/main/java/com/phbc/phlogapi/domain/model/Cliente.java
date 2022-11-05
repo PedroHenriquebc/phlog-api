@@ -1,4 +1,4 @@
-package com.phbc.phlogapi.model;
+package com.phbc.phlogapi.domain.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

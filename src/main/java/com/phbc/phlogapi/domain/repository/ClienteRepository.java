@@ -1,14 +1,16 @@
-package com.phbc.phlogapi.repository;
+package com.phbc.phlogapi.domain.repository;
 
-import com.mysql.cj.xdevapi.Client;
-import com.phbc.phlogapi.model.Cliente;
+import com.phbc.phlogapi.domain.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
-    public List<Cliente> findByNome(String nome);
+    List<Cliente> findByNome(String nome);
+
+    Optional<Cliente> findByEmail(String email);
 }
