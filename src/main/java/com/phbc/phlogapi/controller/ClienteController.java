@@ -26,12 +26,8 @@ public class ClienteController {
 
     @GetMapping("/{clienteId}")
     public ResponseEntity<Cliente> buscar(@PathVariable Long clienteId) {
-        Optional<Cliente> clienteOptional = clienteService.buscar(clienteId);
-        if (clienteOptional.isPresent()) {
-            return ResponseEntity.ok(clienteOptional.get());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        Cliente cliente = clienteService.buscar(clienteId);
+            return ResponseEntity.ok(cliente);
     }
 
     @PostMapping

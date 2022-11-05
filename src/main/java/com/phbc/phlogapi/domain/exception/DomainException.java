@@ -1,2 +1,10 @@
-package com.phbc.phlogapi.domain.exception;public class DomainException {
+package com.phbc.phlogapi.domain.exception;
+
+public class DomainException extends RuntimeException{
+
+    private static final long serialVersionUID = 1L;
+
+    public DomainException(String message) {
+        super(message);
+    }
 }
